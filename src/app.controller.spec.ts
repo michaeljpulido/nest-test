@@ -15,8 +15,14 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return "Nest Test API"', () => {
+      expect(appController.root()).toBe('Nest Test API');
+    });
+  });
+
+  describe('health', () => {
+    it('should return { status: 200 }', () => {
+      expect(appController.health()).toEqual({ status: 200 });
     });
   });
 });
